@@ -21,7 +21,7 @@ class Solution:
         if root is None:
             return None
         if root.left is None and root.right is None:
-            return None
+            return root
         # 2. general case: switch two children
         #   1. invert left child
         root.left = self.invertTree(root.left)
