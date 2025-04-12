@@ -9,6 +9,8 @@
     - [Encode and Decode Strings](#encode-and-decode-strings)
     - [Product of Array Except Self](#product-of-array-except-self)
     - [Valid Sudoku](#valid-sudoku)
+    - [Contains Duplicate](#contains-duplicate)
+    - [Longest Consecutive Sequence](#longest-consecutive-sequence)
 
 
 ## Arrays and Hashing
@@ -274,3 +276,85 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being m
 - `board[i][j]` is a digit `1-9` or `'.'`.
 
 ---
+
+### Contains Duplicate
+
+https://leetcode.com/problems/contains-duplicate/description/
+
+Given an integer array `nums`, return `true` if any value appears **at least twice** in the array, and return `false` if every element is distinct.
+
+ 
+
+**Example 1:**
+
+**Input:** nums = [1,2,3,1]
+
+**Output:** true
+
+**Explanation:**
+
+The element 1 occurs at the indices 0 and 3.
+
+**Example 2:**
+
+**Input:** nums = [1,2,3,4]
+
+**Output:** false
+
+**Explanation:**
+
+All elements are distinct.
+
+**Example 3:**
+
+**Input:** nums = [1,1,1,3,3,4,3,2,4,2]
+
+**Output:** true
+
+ 
+
+**Constraints:**
+
+- `1 <= nums.length <= 105`
+- `-109 <= nums[i] <= 109`
+
+---
+
+### Longest Consecutive Sequence
+
+https://leetcode.com/problems/longest-consecutive-sequence/description/
+
+Given an unsorted array of integers `nums`, return *the length of the longest consecutive elements sequence.*
+
+You must write an algorithm that runs in `O(n)` time.
+
+ 
+
+**Example 1:**
+
+```
+Input: nums = [100,4,200,1,3,2]
+Output: 4
+Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
+```
+
+**Example 2:**
+
+```
+Input: nums = [0,3,7,2,5,8,4,6,0,1]
+Output: 9
+```
+
+**Example 3:**
+
+```
+Input: nums = [1,0,1,2]
+Output: 3
+```
+
+ 
+
+**Constraints:**
+
+- `0 <= nums.length <= 105`
+- `-109 <= nums[i] <= 109`
