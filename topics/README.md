@@ -17,6 +17,8 @@
     - [Two Sum II - Input Array Is Sorted](#two-sum-ii---input-array-is-sorted)
     - [3Sum](#3sum)
     - [Container With Most Water](#container-with-most-water)
+    - [Trapping Rain Water](#trapping-rain-water)
+    - [Valid Palindrome](#valid-palindrome)
 
 
 ## Arrays and Hashing
@@ -591,3 +593,83 @@ Output: 1
 - `n == height.length`
 - `2 <= n <= 105`
 - `0 <= height[i] <= 104`
+
+---
+
+### Trapping Rain Water
+
+https://leetcode.com/problems/trapping-rain-water/description/
+
+Given `n` non-negative integers representing an elevation map where the width of each bar is `1`, compute how much water it can trap after raining.
+
+ 
+
+**Example 1:**
+
+![img](./assets/rainwatertrap.png)
+
+```
+Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+Output: 6
+Explanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.
+```
+
+**Example 2:**
+
+```
+Input: height = [4,2,0,3,2,5]
+Output: 9
+```
+
+ 
+
+**Constraints:**
+
+- `n == height.length`
+- `1 <= n <= 2 * 104`
+- `0 <= height[i] <= 105`
+
+---
+
+### Valid Palindrome
+
+https://leetcode.com/problems/valid-palindrome/description/
+A phrase is a **palindrome** if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+Given a string `s`, return `true` *if it is a **palindrome**, or* `false` *otherwise*.
+
+ 
+
+**Example 1:**
+
+```
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+```
+
+**Example 2:**
+
+```
+Input: s = "race a car"
+Output: false
+Explanation: "raceacar" is not a palindrome.
+```
+
+**Example 3:**
+
+```
+Input: s = " "
+Output: true
+Explanation: s is an empty string "" after removing non-alphanumeric characters.
+Since an empty string reads the same forward and backward, it is a palindrome.
+```
+
+ 
+
+**Constraints:**
+
+- `1 <= s.length <= 2 * 105`
+- `s` consists only of printable ASCII characters.
+
+---
