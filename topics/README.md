@@ -28,6 +28,7 @@
     - [Daily Temperatures](#daily-temperatures)
     - [Valid Parentheses](#valid-parentheses)
     - [Car Fleet](#car-fleet)
+    - [Largest Rectangle in Histogram](#largest-rectangle-in-histogram)
 
 
 ## Arrays and Hashing
@@ -1055,6 +1056,43 @@ There is only one car, hence there is only one fleet.
 - `0 <= position[i] < target`
 - All the values of `position` are **unique**.
 - `0 < speed[i] <= 106`
+
+---
+
+### Largest Rectangle in Histogram
+
+https://leetcode.com/problems/largest-rectangle-in-histogram/description/
+
+Given an array of integers `heights` representing the histogram's bar height where the width of each bar is `1`, return *the area of the largest rectangle in the histogram*.
+
+ 
+
+**Example 1:**
+
+![img](./assets/histogram.jpg)
+
+```
+Input: heights = [2,1,5,6,2,3]
+Output: 10
+Explanation: The above is a histogram where width of each bar is 1.
+The largest rectangle is shown in the red area, which has an area = 10 units.
+```
+
+**Example 2:**
+
+![img](./assets/histogram-1.jpg)
+
+```
+Input: heights = [2,4]
+Output: 4
+```
+
+ 
+
+**Constraints:**
+
+- `1 <= heights.length <= 105`
+- `0 <= heights[i] <= 104`
 
 ---
 
