@@ -41,6 +41,8 @@
     - [Best Time to Buy and Sell Stock](#best-time-to-buy-and-sell-stock)
     - [Longest Substring Without Repeating Characters](#longest-substring-without-repeating-characters)
     - [Longest Repeating Character Replacement](#longest-repeating-character-replacement)
+    - [Minimum Window Substring](#minimum-window-substring)
+    - [Sliding Window Maximum](#sliding-window-maximum)
 
 
 ## Arrays and Hashing
@@ -1537,6 +1539,95 @@ There may exists other ways to achieve this answer too.
 - `1 <= s.length <= 105`
 - `s` consists of only uppercase English letters.
 - `0 <= k <= s.length`
+
+---
+
+### Minimum Window Substring
+
+https://leetcode.com/problems/minimum-window-substring/description/
+
+Given two strings `s` and `t` of lengths `m` and `n` respectively, return *the **minimum window*** ***substring\*** *of* `s` *such that every character in* `t` *(**including duplicates**) is included in the window*. If there is no such substring, return *the empty string* `""`.
+
+The testcases will be generated such that the answer is **unique**.
+
+ 
+
+**Example 1:**
+
+```
+Input: s = "ADOBECODEBANC", t = "ABC"
+Output: "BANC"
+Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
+```
+
+**Example 2:**
+
+```
+Input: s = "a", t = "a"
+Output: "a"
+Explanation: The entire string s is the minimum window.
+```
+
+**Example 3:**
+
+```
+Input: s = "a", t = "aa"
+Output: ""
+Explanation: Both 'a's from t must be included in the window.
+Since the largest window of s only has one 'a', return empty string.
+```
+
+ 
+
+**Constraints:**
+
+- `m == s.length`
+- `n == t.length`
+- `1 <= m, n <= 105`
+- `s` and `t` consist of uppercase and lowercase English letters.
+
+---
+
+### Sliding Window Maximum
+
+https://leetcode.com/problems/sliding-window-maximum/description/
+
+You are given an array of integers `nums`, there is a sliding window of size `k` which is moving from the very left of the array to the very right. You can only see the `k` numbers in the window. Each time the sliding window moves right by one position.
+
+Return *the max sliding window*.
+
+ 
+
+**Example 1:**
+
+```
+Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
+Output: [3,3,5,5,6,7]
+Explanation: 
+Window position                Max
+---------------               -----
+[1  3  -1] -3  5  3  6  7       3
+ 1 [3  -1  -3] 5  3  6  7       3
+ 1  3 [-1  -3  5] 3  6  7       5
+ 1  3  -1 [-3  5  3] 6  7       5
+ 1  3  -1  -3 [5  3  6] 7       6
+ 1  3  -1  -3  5 [3  6  7]      7
+```
+
+**Example 2:**
+
+```
+Input: nums = [1], k = 1
+Output: [1]
+```
+
+ 
+
+**Constraints:**
+
+- `1 <= nums.length <= 105`
+- `-104 <= nums[i] <= 104`
+- `1 <= k <= nums.length`
 
 ---
 
