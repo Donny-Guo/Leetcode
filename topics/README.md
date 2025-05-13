@@ -48,6 +48,7 @@
     - [Merge Two Sorted Lists](#merge-two-sorted-lists)
     - [Linked List Cycle](#linked-list-cycle)
     - [Reorder List](#reorder-list)
+    - [Remove Nth Node From End of List](#remove-nth-node-from-end-of-list)
 
 
 ## Arrays and Hashing
@@ -1831,6 +1832,52 @@ Output: [1,5,2,4,3]
 
 - The number of nodes in the list is in the range `[1, 5 * 104]`.
 - `1 <= Node.val <= 1000`
+
+---
+
+### Remove Nth Node From End of List
+
+https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+
+Given the `head` of a linked list, remove the `nth` node from the end of the list and return its head.
+
+ 
+
+**Example 1:**
+
+![img](./assets/remove_ex1.jpg)
+
+```
+Input: head = [1,2,3,4,5], n = 2
+Output: [1,2,3,5]
+```
+
+**Example 2:**
+
+```
+Input: head = [1], n = 1
+Output: []
+```
+
+**Example 3:**
+
+```
+Input: head = [1,2], n = 1
+Output: [1]
+```
+
+ 
+
+**Constraints:**
+
+- The number of nodes in the list is `sz`.
+- `1 <= sz <= 30`
+- `0 <= Node.val <= 100`
+- `1 <= n <= sz`
+
+ 
+
+**Follow up:** Could you do this in one pass?
 
 ---
 
