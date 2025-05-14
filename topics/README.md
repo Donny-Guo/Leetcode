@@ -49,6 +49,7 @@
     - [Linked List Cycle](#linked-list-cycle)
     - [Reorder List](#reorder-list)
     - [Remove Nth Node From End of List](#remove-nth-node-from-end-of-list)
+    - [Copy List with Random Pointer](#copy-list-with-random-pointer)
 
 
 ## Arrays and Hashing
