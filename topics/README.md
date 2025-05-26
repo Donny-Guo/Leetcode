@@ -59,6 +59,8 @@
     - [Maximum Depth of Binary Tree](#maximum-depth-of-binary-tree)
     - [Diameter of Binary Tree](#diameter-of-binary-tree)
     - [Balanced Binary Tree](#balanced-binary-tree)
+    - [Same Tree](#same-tree)
+    - [Subtree of Another Tree](#subtree-of-another-tree)
 
 
 ## Arrays and Hashing
@@ -2301,6 +2303,91 @@ Output: true
 
 - The number of nodes in the tree is in the range `[0, 5000]`.
 - `-104 <= Node.val <= 104`
+
+---
+
+### Same Tree
+
+https://leetcode.com/problems/same-tree/description/
+
+Given the roots of two binary trees `p` and `q`, write a function to check if they are the same or not.
+
+Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+
+ 
+
+**Example 1:**
+
+![img](./assets/ex1.jpg)
+
+```
+Input: p = [1,2,3], q = [1,2,3]
+Output: true
+```
+
+**Example 2:**
+
+![img](./assets/ex2.jpg)
+
+```
+Input: p = [1,2], q = [1,null,2]
+Output: false
+```
+
+**Example 3:**
+
+![img](./assets/ex3.jpg)
+
+```
+Input: p = [1,2,1], q = [1,1,2]
+Output: false
+```
+
+ 
+
+**Constraints:**
+
+- The number of nodes in both trees is in the range `[0, 100]`.
+- `-104 <= Node.val <= 104`
+
+---
+
+### Subtree of Another Tree
+
+https://leetcode.com/problems/subtree-of-another-tree/description/
+
+Given the roots of two binary trees `root` and `subRoot`, return `true` if there is a subtree of `root` with the same structure and node values of` subRoot` and `false` otherwise.
+
+A subtree of a binary tree `tree` is a tree that consists of a node in `tree` and all of this node's descendants. The tree `tree` could also be considered as a subtree of itself.
+
+ 
+
+**Example 1:**
+
+![img](./assets/subtree1-tree.jpg)
+
+```
+Input: root = [3,4,5,1,2], subRoot = [4,1,2]
+Output: true
+```
+
+**Example 2:**
+
+![img](./assets/subtree2-tree.jpg)
+
+```
+Input: root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]
+Output: false
+```
+
+ 
+
+**Constraints:**
+
+- The number of nodes in the `root` tree is in the range `[1, 2000]`.
+- The number of nodes in the `subRoot` tree is in the range `[1, 1000]`.
+- `-104 <= root.val <= 104`
+- `-104 <= subRoot.val <= 104`
 
 ---
 
