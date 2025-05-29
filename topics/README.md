@@ -62,6 +62,7 @@
     - [Same Tree](#same-tree)
     - [Subtree of Another Tree](#subtree-of-another-tree)
     - [Lowest Common Ancestor of a Binary Search Tree](#lowest-common-ancestor-of-a-binary-search-tree)
+    - [Binary Tree Level Order Traversal](#binary-tree-level-order-traversal)
 
 
 ## Arrays and Hashing
@@ -2445,6 +2446,46 @@ Output: 2
 
 - Binary search tree: is a sorted binary tree (each node's value is greater all the node values in the left subtree and smaller than all node values in the right subtree)
 - since it is a binary search tree, we can easily tell locate which direction to look for node.
+
+---
+
+### Binary Tree Level Order Traversal
+
+https://leetcode.com/problems/binary-tree-level-order-traversal/description/
+
+Given the `root` of a binary tree, return *the level order traversal of its nodes' values*. (i.e., from left to right, level by level).
+
+ 
+
+**Example 1:**
+
+![img](./assets/tree1.jpg)
+
+```
+Input: root = [3,9,20,null,null,15,7]
+Output: [[3],[9,20],[15,7]]
+```
+
+**Example 2:**
+
+```
+Input: root = [1]
+Output: [[1]]
+```
+
+**Example 3:**
+
+```
+Input: root = []
+Output: []
+```
+
+ 
+
+**Constraints:**
+
+- The number of nodes in the tree is in the range `[0, 2000]`.
+- `-1000 <= Node.val <= 1000`
 
 ---
 
