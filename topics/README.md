@@ -83,6 +83,9 @@
     - [Combination Sum II](#combination-sum-ii)
     - [Permutations](#permutations)
     - [Subsets II](#subsets-ii)
+    - [Word Search](#word-search)
+    - [Palindrome Partitioning](#palindrome-partitioning)
+    - [Letter Combinations of a Phone Number](#letter-combinations-of-a-phone-number)
 
 
 ## Arrays and Hashing
@@ -3338,6 +3341,132 @@ Output: [[],[0]]
 
 - `1 <= nums.length <= 10`
 - `-10 <= nums[i] <= 10`
+
+---
+
+### Word Search
+
+https://leetcode.com/problems/word-search/description/
+
+Given an `m x n` grid of characters `board` and a string `word`, return `true` *if* `word` *exists in the grid*.
+
+The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
+
+ 
+
+**Example 1:**
+
+![img](./assets/word2.jpg)
+
+```
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
+Output: true
+```
+
+**Example 2:**
+
+![img](./assets/word-1.jpg)
+
+```
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"
+Output: true
+```
+
+**Example 3:**
+
+![img](./assets/word3.jpg)
+
+```
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"
+Output: false
+```
+
+ 
+
+**Constraints:**
+
+- `m == board.length`
+- `n = board[i].length`
+- `1 <= m, n <= 6`
+- `1 <= word.length <= 15`
+- `board` and `word` consists of only lowercase and uppercase English letters.
+
+ 
+
+**Follow up:** Could you use search pruning to make your solution faster with a larger `board`?
+
+----
+
+### Palindrome Partitioning
+
+https://leetcode.com/problems/palindrome-partitioning/description/
+
+Given a string `s`, partition `s` such that every substring of the partition is a **palindrome**. Return *all possible palindrome partitioning of* `s`.
+
+ 
+
+**Example 1:**
+
+```
+Input: s = "aab"
+Output: [["a","a","b"],["aa","b"]]
+```
+
+**Example 2:**
+
+```
+Input: s = "a"
+Output: [["a"]]
+```
+
+ 
+
+**Constraints:**
+
+- `1 <= s.length <= 16`
+- `s` contains only lowercase English letters.
+
+---
+
+### Letter Combinations of a Phone Number
+
+https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+
+Given a string containing digits from `2-9` inclusive, return all possible letter combinations that the number could represent. Return the answer in **any order**.
+
+A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+
+![img](./assets/1200px-telephone-keypad2svg-20250710230256823.png)
+
+ 
+
+**Example 1:**
+
+```
+Input: digits = "23"
+Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+```
+
+**Example 2:**
+
+```
+Input: digits = ""
+Output: []
+```
+
+**Example 3:**
+
+```
+Input: digits = "2"
+Output: ["a","b","c"]
+```
+
+ 
+
+**Constraints:**
+
+- `0 <= digits.length <= 4`
+- `digits[i]` is a digit in the range `['2', '9']`.
 
 ---
 
