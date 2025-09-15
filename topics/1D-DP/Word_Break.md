@@ -1,0 +1,121 @@
+# Word Break
+
+https://leetcode.com/problems/word-break/description/
+
+Given a string `s` and a dictionary of strings `wordDict`, return `true` if `s` can be segmented into a space-separated sequence of one or more dictionary words.
+
+**Note** that the same word in the dictionary may be reused multiple times in the segmentation.
+
+ 
+
+**Example 1:**
+
+```
+Input: s = "leetcode", wordDict = ["leet","code"]
+Output: true
+Explanation: Return true because "leetcode" can be segmented as "leet code".
+```
+
+**Example 2:**
+
+```
+Input: s = "applepenapple", wordDict = ["apple","pen"]
+Output: true
+Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
+Note that you are allowed to reuse a dictionary word.
+```
+
+**Example 3:**
+
+```
+Input: s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]
+Output: false
+```
+
+ 
+
+**Constraints:**
+
+- `1 <= s.length <= 300`
+- `1 <= wordDict.length <= 1000`
+- `1 <= wordDict[i].length <= 20`
+- `s` and `wordDict[i]` consist of only lowercase English letters.
+- All the strings of `wordDict` are **unique**.
+
+
+
+## Solution: recursion (failed runtime)
+
+```python
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        def dfs(s) -> bool:
+            if not s: return True
+
+            for word in wordDict:
+                word_len = len(word)
+                if len(s) >= word_len and s[:word_len] == word:
+                    if dfs(s[word_len:]): 
+                        return True
+            return False
+        
+        return dfs(s)
+```
+
+TC: O(t * m^n)
+
+SC: O(n)
+
+n: Length of s, m: length of wordDict, t: max length of word in wordDict
+
+## Solution: top-down DP
+
+```python
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        memo = {}
+        def dfs(s) -> bool:
+            if not s: return True
+            if s in memo: return memo[s]
+
+            for word in wordDict:
+                word_len = len(word)
+                if len(s) >= word_len and s[:word_len] == word:
+                    if dfs(s[word_len:]): 
+                        memo[s] = True
+                        return True
+            memo[s] = False
+            return False
+        
+        return dfs(s)
+```
+
+TC: O(n * m * n)
+
+SC: O(n)
+
+n: Length of s, m: length of wordDict
+
+## Solution: bottom-up DP
+
+```python
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        dp = [False] * (len(s) + 1)
+        dp[-1] = True
+
+        for i in range(len(s) - 1, -1, -1):
+            for word in wordDict:
+                if (i + len(word)) <= len(s) and s[i:i+len(word)] == word:
+                    dp[i] = dp[i+len(word)]
+                if dp[i]:
+                    break
+        
+        return dp[0]
+```
+
+TC: O(n * m * n)
+
+SC: O(n)
+
+n: Length of s, m: length of wordDict
