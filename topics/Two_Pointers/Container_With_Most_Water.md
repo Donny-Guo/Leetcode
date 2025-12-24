@@ -87,6 +87,8 @@ class Solution:
         return res
 ```
 
+Note: always move the lower side since that's the bottleneck. Keeping the lower side will only decrease the area since the width decreases.
+
 TC: O(n)
 
 SC: O(1)
